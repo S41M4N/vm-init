@@ -20,5 +20,4 @@ read -p "Do you want to create virtual host?(y/n): " REPLY
 read -p "Do you want to install rdp?(y/n): " REPLY
 [[ $REPLY =~ ^[Yy]$ ]] && source ./script/rdp.sh
 
-sudo systemctl restart apache2
 echo "Done!"
