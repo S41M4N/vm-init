@@ -18,6 +18,7 @@ cd temp
 
 curl -L -o server.zip "https://github.com/S41M4N/vm-init/archive/main.zip"
 unzip server.zip
+mv vm-init-main/* .
 bash ./install.sh
 
 cd ../
