@@ -10,7 +10,7 @@ echo "Creating User..."
 
 sudo mysql -u root -e "CREATE USER 'salman'@'localhost' IDENTIFIED BY '$MYSQL_PASSWORD';"
 # GRANT PRIVILEGE ON database.table TO 'username'@'host';
-sudo mysql -u root -e "GRANT PRIVILEGE ON *.* TO 'salman'@'localhost';"
+sudo mysql -u root -e "GRANT ALL PRIVILEGES ON *.* TO 'salman'@'localhost' WITH GRANT OPTION;"
 sudo mysql -u root -e "FLUSH PRIVILEGES;"
 
 echo "Created user salman with password: '$MYSQL_PASSWORD'"
