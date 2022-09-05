@@ -3,14 +3,10 @@
 
 set -e
 
-function command_exist() {
-  type "$1" >/dev/null 2>&1
-}
-
 sudo apt update
 
-[[! command_exist "unzip"]] && sudo apt install unzip
-[[! command_exist "curl"]] && sudo apt install curl
+if ! command -v unzip &>/dev/null; then sudo apt install unzip; fi
+if ! command -v curl &>/dev/null; then sudo apt install curl; fi
 
 mkdir temp
 cd temp
